@@ -279,6 +279,9 @@ const keysRu = [
     BracketRight: 'ъ',
   },
   {
+    Backslash: '\\',
+  },
+  {
     Delete: 'Del',
   },
   {
