@@ -191,8 +191,7 @@ const keysEn = [
   },
   {
     ControlRight: 'Ctrl',
-  }
-
+  },
 
 ];
 
@@ -389,9 +388,8 @@ const keysRu = [
   },
   {
     ControlRight: 'Ctrl',
-  }
+  },
 
 ];
 
-export {keysEn, keysRu};
-
+export { keysEn, keysRu };

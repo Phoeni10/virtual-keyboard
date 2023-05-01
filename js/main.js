@@ -1,5 +1,6 @@
 import {
   makeKeyboard, makeKeysEn, makeKeysRu, pressKeys, changeLocalSorage,
+// eslint-disable-next-line import/extensions
 } from '../modules/functions.js';
 
 localStorage.setItem('lang', 'Ru');

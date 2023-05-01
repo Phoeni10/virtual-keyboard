@@ -1,3 +1,4 @@
+// eslint-disable-next-line import/extensions
 import { keysEn, keysRu } from './variables.js';
 
 /* создание клавиатуры */
@@ -23,6 +24,7 @@ function makeKeyboard() {
 function makeKeysEn() {
   const keyboard = document.querySelector('.keyboard');
 
+  // eslint-disable-next-line no-plusplus
   for (let i = 0; i < keysEn.length; i++) {
     const key = document.createElement('div');
     key.classList.add('keyboard__key');
@@ -38,6 +40,7 @@ function makeKeysEn() {
 function makeKeysRu() {
   const keyboard = document.querySelector('.keyboard');
 
+  // eslint-disable-next-line no-plusplus
   for (let i = 0; i < keysRu.length; i++) {
     const key = document.createElement('div');
     key.classList.add('keyboard__key');
