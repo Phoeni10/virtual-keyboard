@@ -149,7 +149,36 @@ function flashKeysOut(event) {
   }
 }
 
+/* ввод текста с реальной клавиатуры */
+function writeFromR(event) {
+  event.preventDefault();
+  const text = document.querySelector('.text');
+
+  if (event.key === 'Tab') {
+    text.textContent += '    ';
+  } else if (event.key === 'Enter') {
+    text.textContent += '\n';
+  } else if (event.key === 'Backspace') {
+    text.textContent = text.textContent.slice(0, text.textContent.length - 1);
+  } else if (event.key === 'Delete') {
+    text.textContent = text.textContent.slice(0, text.selectionStart)
+    + text.textContent.slice(text.selectionStart + 1);
+  } else if (event.code === 'ShiftLeft' || event.code === 'ShiftRight' || event.code === 'ControlLeft'
+    || event.code === 'MetaLeft' || event.code === 'AltLeft' || event.code === 'AltRight'
+    || event.code === 'ControlRight' || event.code === 'CapsLock') {
+    text.textContent += '';
+  } else if (event.code === 'ArrowUp') {
+    text.textContent += '↑';
+  } else if (event.code === 'ArrowLeft') {
+    text.textContent += '←';
+  } else if (event.code === 'ArrowDown') {
+    text.textContent += '↓';
+  } else if (event.code === 'ArrowRight') {
+    text.textContent += '→';
+  } else text.textContent += event.key;
+}
+
 export {
   makeKeyboard, makeKeysEn, makeKeysRu, pressKeys, changeLocalSorage, flashKeysR, flashKeysV,
-  flashKeysHover, flashKeysOut, flashKeysRNo, flashKeysVNo,
+  flashKeysHover, flashKeysOut, flashKeysRNo, flashKeysVNo, writeFromR,
 };

@@ -1,6 +1,6 @@
 import {
   makeKeyboard, makeKeysEn, makeKeysRu, pressKeys, changeLocalSorage, flashKeysR, flashKeysV,
-  flashKeysHover, flashKeysOut, flashKeysRNo, flashKeysVNo,
+  flashKeysHover, flashKeysOut, flashKeysRNo, flashKeysVNo, writeFromR,
 // eslint-disable-next-line import/extensions
 } from '../modules/functions.js';
 
@@ -28,3 +28,6 @@ document.addEventListener('mousedown', flashKeysV);
 document.addEventListener('mouseup', flashKeysVNo);
 
 pressKeys(changeLocalSorage, 'ShiftLeft', 'AltLeft');
+
+/* нажатие клавиш на реальной клавиатуре */
+document.addEventListener('keyup', writeFromR);
