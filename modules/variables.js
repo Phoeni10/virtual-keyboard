@@ -1,196 +1,196 @@
 const keysEn = [
   {
-    "Backquote": "`"
+    Backquote: '`',
 
   },
   {
-    "Digit1": "1"
+    Digit1: '1',
   },
   {
-    "Digit2": "2"
+    Digit2: '2',
   },
   {
-    "Digit3": "3"
+    Digit3: '3',
   },
   {
-    "Digit4": "4"
+    Digit4: '4',
   },
   {
-    "Digit5": "5"
+    Digit5: '5',
   },
   {
-    "Digit6": "6"
+    Digit6: '6',
   },
   {
-    "Digit7": "7"
+    Digit7: '7',
   },
   {
-    "Digit8": "8"
+    Digit8: '8',
   },
   {
-    "Digit9": "9"
+    Digit9: '9',
   },
   {
-    "Digit0": "0"
+    Digit0: '0',
   },
   {
-    "Minus": "-"
+    Minus: '-',
   },
   {
-    "Equal": "="
+    Equal: '=',
   },
   {
-    "Backspace": "Backspace"
+    Backspace: 'Backspace',
   },
   {
-    "Tab": "Tab"
+    Tab: 'Tab',
   },
   {
-    "KeyQ": "q"
+    KeyQ: 'q',
   },
   {
-    "KeyW": "w"
+    KeyW: 'w',
   },
   {
-    "KeyE": "e"
+    KeyE: 'e',
   },
   {
-    "KeyR": "r"
+    KeyR: 'r',
   },
   {
-    "KeyT": "t"
+    KeyT: 't',
   },
   {
-    "KeyY": "y"
+    KeyY: 'y',
   },
   {
-    "KeyU": "u"
+    KeyU: 'u',
   },
   {
-    "KeyI": "i"
+    KeyI: 'i',
   },
   {
-    "KeyO": "o"
+    KeyO: 'o',
   },
   {
-    "KeyP": "p"
+    KeyP: 'p',
   },
   {
-    "BracketLeft": "["
+    BracketLeft: '[',
   },
   {
-    "BracketRight": "]"
+    BracketRight: ']',
   },
   {
-    "Backslash": "\\"
+    Backslash: '\\',
   },
   {
-    "Delete": "Del"
+    Delete: 'Del',
   },
   {
-    "CapsLock": "CapsLock"
+    CapsLock: 'CapsLock',
   },
   {
-    "KeyA": "a"
+    KeyA: 'a',
   },
   {
-    "KeyS": "s"
+    KeyS: 's',
   },
   {
-    "KeyD": "d"
+    KeyD: 'd',
   },
   {
-    "KeyF": "f"
+    KeyF: 'f',
   },
   {
-    "KeyG": "g"
+    KeyG: 'g',
   },
   {
-    "KeyH": "h"
+    KeyH: 'h',
   },
   {
-    "KeyJ": "j"
+    KeyJ: 'j',
   },
   {
-    "KeyK": "k"
+    KeyK: 'k',
   },
   {
-    "KeyL": "l"
+    KeyL: 'l',
   },
   {
-    "Semicolon": ";"
+    Semicolon: ';',
   },
   {
-    "Quote": "'"
+    Quote: "'",
   },
   {
-    "Enter": "Enter"
+    Enter: 'Enter',
   },
   {
-    "ShiftLeft": "Shift"
+    ShiftLeft: 'Shift',
   },
   {
-    "KeyZ": "z"
+    KeyZ: 'z',
   },
   {
-    "KeyX": "x"
+    KeyX: 'x',
   },
   {
-    "KeyC": "c"
+    KeyC: 'c',
   },
   {
-    "KeyV": "v"
+    KeyV: 'v',
   },
   {
-    "KeyB": "b"
+    KeyB: 'b',
   },
   {
-    "KeyN": "n"
+    KeyN: 'n',
   },
   {
-    "KeyM": "m"
+    KeyM: 'm',
   },
   {
-    "Comma": ","
+    Comma: ',',
   },
   {
-    "Period": "."
+    Period: '.',
   },
   {
-    "Slash": "/"
+    Slash: '/',
   },
   {
-    "ArrowUp": "↑"
+    ArrowUp: '↑',
   },
   {
-    "ShiftRight": "Shift"
+    ShiftRight: 'Shift',
   },
   {
-    "ControlLeft": "Ctrl"
+    ControlLeft: 'Ctrl',
   },
   {
-    "MetaLeft": "Win"
+    MetaLeft: 'Win',
   },
   {
-    "AltLeft": "Alt"
+    AltLeft: 'Alt',
   },
   {
-    "Space": " "
+    Space: ' ',
   },
   {
-    "AltRight": "Alt"
+    AltRight: 'Alt',
   },
   {
-    "ArrowLeft": "←"
+    ArrowLeft: '←',
   },
   {
-    "ArrowDown": "↓"
+    ArrowDown: '↓',
   },
   {
-    "ArrowRight": "→"
+    ArrowRight: '→',
   },
   {
-    "ControlRight": "Ctrl"
+    ControlRight: 'Ctrl',
   }
 
 
@@ -198,194 +198,194 @@ const keysEn = [
 
 const keysRu = [
   {
-    "Backquote": "ё"
+    Backquote: 'ё',
   },
   {
-    "Digit1": "1"
+    Digit1: '1',
   },
   {
-    "Digit2": "2"
+    Digit2: '2',
   },
   {
-    "Digit3": "3"
+    Digit3: '3',
   },
   {
-    "Digit4": "4"
+    Digit4: '4',
   },
   {
-    "Digit5": "5"
+    Digit5: '5',
   },
   {
-    "Digit6": "6"
+    Digit6: '6',
   },
   {
-    "Digit7": "7"
+    Digit7: '7',
   },
   {
-    "Digit8": "8"
+    Digit8: '8',
   },
   {
-    "Digit9": "9"
+    Digit9: '9',
   },
   {
-    "Digit0": "0"
+    Digit0: '0',
   },
   {
-    "Minus": "-"
+    Minus: '-',
   },
   {
-    "Equal": "="
+    Equal: '=',
   },
   {
-    "Backspace": "Backspace"
+    Backspace: 'Backspace',
   },
   {
-    "Tab": "Tab"
+    Tab: 'Tab',
   },
   {
-    "KeyQ": "й"
+    KeyQ: 'й',
   },
   {
-    "KeyW": "ц"
+    KeyW: 'ц',
   },
   {
-    "KeyE": "у"
+    KeyE: 'у',
   },
   {
-    "KeyR": "к"
+    KeyR: 'к',
   },
   {
-    "KeyT": "е"
+    KeyT: 'е',
   },
   {
-    "KeyY": "н"
+    KeyY: 'н',
   },
   {
-    "KeyU": "г"
+    KeyU: 'г',
   },
   {
-    "KeyI": "ш"
+    KeyI: 'ш',
   },
   {
-    "KeyO": "щ"
+    KeyO: 'щ',
   },
   {
-    "KeyP": "з"
+    KeyP: 'з',
   },
   {
-    "BracketLeft": "х"
+    BracketLeft: 'х',
   },
   {
-    "BracketRight": "ъ"
+    BracketRight: 'ъ',
   },
   {
-    "Delete": "Del"
+    Delete: 'Del',
   },
   {
-    "CapsLock": "CapsLock"
+    CapsLock: 'CapsLock',
   },
   {
-    "KeyA": "ф"
+    KeyA: 'ф',
   },
   {
-    "KeyS": "ы"
+    KeyS: 'ы',
   },
   {
-    "KeyD": "в"
+    KeyD: 'в',
   },
   {
-    "KeyF": "а"
+    KeyF: 'а',
   },
   {
-    "KeyG": "п"
+    KeyG: 'п',
   },
   {
-    "KeyH": "р"
+    KeyH: 'р',
   },
   {
-    "KeyJ": "о"
+    KeyJ: 'о',
   },
   {
-    "KeyK": "л"
+    KeyK: 'л',
   },
   {
-    "KeyL": "д"
+    KeyL: 'д',
   },
   {
-    "Semicolon": "ж"
+    Semicolon: 'ж',
   },
   {
-    "Quote": "э"
+    Quote: 'э',
   },
   {
-    "Enter": "Enter"
+    Enter: 'Enter',
   },
   {
-    "ShiftLeft": "Shift"
+    ShiftLeft: 'Shift',
   },
 
   {
-    "KeyZ": "я"
+    KeyZ: 'я',
   },
   {
-    "KeyX": "ч"
+    KeyX: 'ч',
   },
   {
-    "KeyC": "с"
+    KeyC: 'с',
   },
   {
-    "KeyV": "м"
+    KeyV: 'м',
   },
   {
-    "KeyB": "и"
+    KeyB: 'и',
   },
   {
-    "KeyN": "т"
+    KeyN: 'т',
   },
   {
-    "KeyM": "ь"
+    KeyM: 'ь',
   },
   {
-    "Comma": "б"
+    Comma: 'б',
   },
   {
-    "Period": "ю"
+    Period: 'ю',
   },
   {
-    "Slash": "."
+    Slash: '.',
   },
   {
-    "ArrowUp": "↑"
+    ArrowUp: '↑',
   },
   {
-    "ShiftRight": "Shift"
+    ShiftRight: 'Shift',
   },
   {
-    "ControlLeft": "Ctrl"
+    ControlLeft: 'Ctrl',
   },
   {
-    "MetaLeft": "Win"
+    MetaLeft: 'Win',
   },
   {
-    "AltLeft": "Alt"
+    AltLeft: 'Alt',
   },
   {
-    "Space": " "
+    Space: ' ',
   },
   {
-    "AltRight": "Alt"
+    AltRight: 'Alt',
   },
   {
-    "ArrowLeft": "←"
+    ArrowLeft: '←',
   },
   {
-    "ArrowDown": "↓"
+    ArrowDown: '↓',
   },
   {
-    "ArrowRight": "→"
+    ArrowRight: '→',
   },
   {
-    "ControlRight": "Ctrl"
+    ControlRight: 'Ctrl',
   }
 
 ];

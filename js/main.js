@@ -1,6 +1,17 @@
-import { makeKeyboard, makeKeysEn, makeKeysRu } from '../modules/functions.js';
+import {
+  makeKeyboard, makeKeysEn, makeKeysRu, pressKeys, changeLocalSorage,
+} from '../modules/functions.js';
 
+localStorage.setItem('lang', 'Ru');
+
+/* добавление клавиатуры */
 document.addEventListener('DOMContentLoaded', makeKeyboard());
 
 /* добавление клавиш */
-document.addEventListener('DOMContentLoaded', makeKeysEn());
+if (localStorage.getItem('lang') === 'En') {
+  document.addEventListener('DOMContentLoaded', makeKeysEn());
+} else {
+  document.addEventListener('DOMContentLoaded', makeKeysRu());
+}
+
+pressKeys(changeLocalSorage, 'ShiftLeft', 'AltLeft');
