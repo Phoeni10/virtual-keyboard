@@ -98,7 +98,17 @@ function flashKeysR(event) {
   const btn = document.querySelector(`.${code}`);
 
   btn.classList.add('key_click');
-  setTimeout(() => btn.classList.remove('key_click'), 200);
+  btn.classList.add('active');
+}
+
+function flashKeysRNo(event) {
+  event.preventDefault();
+
+  const { code } = event;
+  const btn = document.querySelector(`.${code}`);
+
+  btn.classList.remove('key_click');
+  btn.classList.remove('active');
 }
 
 /* подсветка кнопок при нажатии на виртуальную клавиатуру */
@@ -107,7 +117,18 @@ function flashKeysV(event) {
   if (target.classList.contains('keyboard__key')) {
     target.classList.remove('hover');
     target.classList.add('key_click');
-    setTimeout(() => target.classList.remove('key_click'), 200);
+    target.classList.add('active');
+    /* setTimeout(() => target.classList.remove('key_click'), 200); */
+    target.classList.add('hover');
+  }
+}
+
+function flashKeysVNo(event) {
+  const { target } = event;
+  if (target.classList.contains('keyboard__key')) {
+    target.classList.remove('key_click');
+    target.classList.remove('active');
+    /* setTimeout(() => target.classList.remove('key_click'), 200); */
     target.classList.add('hover');
   }
 }
@@ -130,5 +151,5 @@ function flashKeysOut(event) {
 
 export {
   makeKeyboard, makeKeysEn, makeKeysRu, pressKeys, changeLocalSorage, flashKeysR, flashKeysV,
-  flashKeysHover, flashKeysOut,
+  flashKeysHover, flashKeysOut, flashKeysRNo, flashKeysVNo,
 };

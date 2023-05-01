@@ -1,6 +1,6 @@
 import {
   makeKeyboard, makeKeysEn, makeKeysRu, pressKeys, changeLocalSorage, flashKeysR, flashKeysV,
-  flashKeysHover, flashKeysOut,
+  flashKeysHover, flashKeysOut, flashKeysRNo, flashKeysVNo,
 // eslint-disable-next-line import/extensions
 } from '../modules/functions.js';
 
@@ -18,11 +18,13 @@ if (!localStorage.getItem('lang')) {
 }
 
 document.addEventListener('keydown', flashKeysR);
+document.addEventListener('keyup', flashKeysRNo);
 
 document.addEventListener('mouseover', flashKeysHover);
 
 document.addEventListener('mouseout', flashKeysOut);
 
-document.addEventListener('click', flashKeysV);
+document.addEventListener('mousedown', flashKeysV);
+document.addEventListener('mouseup', flashKeysVNo);
 
 pressKeys(changeLocalSorage, 'ShiftLeft', 'AltLeft');
