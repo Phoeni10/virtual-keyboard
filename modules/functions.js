@@ -1,5 +1,7 @@
+import {
+  keysEn, keysRu, keysEnShift, keysRuShift,
 // eslint-disable-next-line import/extensions
-import { keysEn, keysRu } from './variables.js';
+} from './variables.js';
 
 /* создание клавиатуры */
 function makeKeyboard() {
@@ -37,6 +39,22 @@ function makeKeysEn() {
   }
 }
 
+function makeKeysEnShift() {
+  const keyboard = document.querySelector('.keyboard');
+
+  // eslint-disable-next-line no-plusplus
+  for (let i = 0; i < keysEnShift.length; i++) {
+    const key = document.createElement('div');
+    key.classList.add('keyboard__key');
+    /* const str = String(Object.keys(keysEn[i])).toLowerCase(); */
+    const str = String(Object.keys(keysEnShift[i]));
+    key.classList.add(str);
+    key.textContent = Object.values(keysEnShift[i]);
+
+    keyboard.append(key);
+  }
+}
+
 /* создание клавиш ru */
 function makeKeysRu() {
   const keyboard = document.querySelector('.keyboard');
@@ -49,6 +67,22 @@ function makeKeysRu() {
     const str = String(Object.keys(keysRu[i]));
     key.classList.add(str);
     key.textContent = Object.values(keysRu[i]);
+
+    keyboard.append(key);
+  }
+}
+
+function makeKeysRuShift() {
+  const keyboard = document.querySelector('.keyboard');
+
+  // eslint-disable-next-line no-plusplus
+  for (let i = 0; i < keysRuShift.length; i++) {
+    const key = document.createElement('div');
+    key.classList.add('keyboard__key');
+    /* const str = String(Object.keys(keysRu[i])).toLowerCase(); */
+    const str = String(Object.keys(keysRuShift[i]));
+    key.classList.add(str);
+    key.textContent = Object.values(keysRuShift[i]);
 
     keyboard.append(key);
   }
@@ -178,7 +212,72 @@ function writeFromR(event) {
   } else text.textContent += event.key;
 }
 
+/* ввод текста с виртуальной клавиатуры */
+function writeFromV(event) {
+  if (event.target.classList.contains('keyboard__key')) {
+    const text = document.querySelector('.text');
+    if (event.target.classList.contains('Tab')) {
+      text.textContent += '    ';
+    } else if (event.target.classList.contains('Enter')) {
+      text.textContent += '\n';
+    } else if (event.target.classList.contains('Backspace')) {
+      text.textContent = text.textContent.slice(0, text.textContent.length - 1);
+    } else if (event.target.classList.contains('Delete')) {
+      text.textContent = text.textContent.slice(0, text.selectionStart)
+      + text.textContent.slice(text.selectionStart + 1);
+    } else if (event.target.classList.contains('ShiftLeft') || event.target.classList.contains('ShiftRight')
+    || event.target.classList.contains('ControlLeft')
+    || event.target.classList.contains('MetaLeft') || event.target.classList.contains('AltLeft')
+    || event.target.classList.contains('AltRight') || event.target.classList.contains('ControlRight')
+    || event.target.classList.contains('CapsLock')) {
+      text.textContent += '';
+    } else {
+      text.textContent += event.target.textContent;
+    }
+  }
+}
+/* зажатие клавиши Shift */
+function pressShift(event) {
+  if (event.code === 'ShiftLeft' || event.code === 'ShiftRight') {
+    if (localStorage.getItem('lang') === 'En') {
+      const keyboard = document.querySelector('.keyboard');
+      keyboard.innerHTML = '';
+      /* localStorage.removeItem('lang');
+      localStorage.setItem('lang', 'Ru'); */
+      makeKeysEnShift();
+      /* document.addEventListener('click', writeFromV); */
+    } else {
+      const keyboard = document.querySelector('.keyboard');
+      keyboard.innerHTML = '';
+      /* localStorage.removeItem('lang');
+      localStorage.setItem('lang', 'En'); */
+      makeKeysRuShift();
+      /* document.addEventListener('click', writeFromV); */
+    }
+  }
+}
+
+/* отжатие жатие клавиши Shift */
+function pressShifOff(event) {
+  if (event.code === 'ShiftLeft' || event.code === 'ShiftRight') {
+    if (localStorage.getItem('lang') === 'En') {
+      const keyboard = document.querySelector('.keyboard');
+      keyboard.innerHTML = '';
+      /* localStorage.removeItem('lang');
+      localStorage.setItem('lang', 'Ru'); */
+      makeKeysEn();
+    } else {
+      const keyboard = document.querySelector('.keyboard');
+      keyboard.innerHTML = '';
+      /* localStorage.removeItem('lang');
+      localStorage.setItem('lang', 'En'); */
+      makeKeysRu();
+    }
+  }
+}
+
 export {
   makeKeyboard, makeKeysEn, makeKeysRu, pressKeys, changeLocalSorage, flashKeysR, flashKeysV,
-  flashKeysHover, flashKeysOut, flashKeysRNo, flashKeysVNo, writeFromR,
+  flashKeysHover, flashKeysOut, flashKeysRNo, flashKeysVNo, writeFromR, writeFromV, pressShift,
+  pressShifOff,
 };

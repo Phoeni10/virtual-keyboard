@@ -1,6 +1,7 @@
 import {
   makeKeyboard, makeKeysEn, makeKeysRu, pressKeys, changeLocalSorage, flashKeysR, flashKeysV,
-  flashKeysHover, flashKeysOut, flashKeysRNo, flashKeysVNo, writeFromR,
+  flashKeysHover, flashKeysOut, flashKeysRNo, flashKeysVNo, writeFromR, writeFromV, pressShift,
+  pressShifOff,
 // eslint-disable-next-line import/extensions
 } from '../modules/functions.js';
 
@@ -31,3 +32,12 @@ pressKeys(changeLocalSorage, 'ShiftLeft', 'AltLeft');
 
 /* нажатие клавиш на реальной клавиатуре */
 document.addEventListener('keyup', writeFromR);
+
+/* нажатие клавиш на виртуальной клавиатуре */
+document.addEventListener('click', writeFromV);
+
+/* зажатие клавиши Shift */
+document.addEventListener('keydown', pressShift);
+
+/* отжатие жатие клавиши Shift */
+document.addEventListener('keyup', pressShifOff);
