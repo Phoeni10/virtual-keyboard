@@ -1,0 +1,100 @@
+* {
+    user-select: none;
+}
+
+.keyboard {
+    width: 710px;
+    height: 251px;
+    background-color: silver;
+    border: 2px solid black;
+    margin: 0 auto 15px;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding: 3px;
+
+}
+
+.text {
+    display: block;
+    width: 710px;
+    height: 125px;
+    margin: 0 auto 20px;
+}
+
+.info {
+    text-align: center;
+}
+
+.keyboard__key {
+    width: 40px;
+    height: 40px;
+    margin: 3px;
+    border-radius: 4px;
+    text-align: center;
+    line-height: 40px;
+
+    background-color: antiquewhite;
+    /* border: 1px solid black; */
+    cursor: pointer;
+}
+.hover {
+    background-color: rgb(169, 169, 169);
+}
+.active {
+    border-radius: 50%;
+    border: none;
+}
+
+.Backspace,
+.Tab,
+.Delete,
+.CapsLock,
+.Enter,
+.ArrowUp,
+.ArrowLeft,
+.ArrowRight,
+.ArrowDown,
+.ShiftLeft,
+.ShiftRight,
+.ControlLeft,
+.ControlRight,
+.MetaLeft,
+.Space,
+.AltLeft,
+.AltRight {
+    background-color: rgb(207, 168, 117);
+}
+
+.Backspace,
+.ShiftLeft,
+.CapsLock {
+    width: 100px;
+}
+
+.Delete {
+    width: 44px;
+}
+
+.Tab {
+    width: 50px;
+}
+
+.Enter,
+.ShiftRight {
+    width: 88px;
+}
+
+.Space {
+    width: 330px;
+}
+
+.ControlLeft,
+.ControlRight {
+    width: 43px;
+}
+
+.key_click{
+    background-color: rgb(110, 110, 110);
+}
