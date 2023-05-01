@@ -28,7 +28,8 @@ function makeKeysEn() {
   for (let i = 0; i < keysEn.length; i++) {
     const key = document.createElement('div');
     key.classList.add('keyboard__key');
-    const str = String(Object.keys(keysEn[i])).toLowerCase();
+    /* const str = String(Object.keys(keysEn[i])).toLowerCase(); */
+    const str = String(Object.keys(keysEn[i]));
     key.classList.add(str);
     key.textContent = Object.values(keysEn[i]);
 
@@ -44,7 +45,8 @@ function makeKeysRu() {
   for (let i = 0; i < keysRu.length; i++) {
     const key = document.createElement('div');
     key.classList.add('keyboard__key');
-    const str = String(Object.keys(keysRu[i])).toLowerCase();
+    /* const str = String(Object.keys(keysRu[i])).toLowerCase(); */
+    const str = String(Object.keys(keysRu[i]));
     key.classList.add(str);
     key.textContent = Object.values(keysRu[i]);
 
@@ -88,6 +90,45 @@ function changeLocalSorage() {
   }
 }
 
+/* подсветка кнопок при нажатии на реальную клавиатуру */
+function flashKeysR(event) {
+  event.preventDefault();
+
+  const { code } = event;
+  const btn = document.querySelector(`.${code}`);
+
+  btn.classList.add('key_click');
+  setTimeout(() => btn.classList.remove('key_click'), 200);
+}
+
+/* подсветка кнопок при нажатии на виртуальную клавиатуру */
+function flashKeysV(event) {
+  const { target } = event;
+  if (target.classList.contains('keyboard__key')) {
+    target.classList.remove('hover');
+    target.classList.add('key_click');
+    setTimeout(() => target.classList.remove('key_click'), 200);
+    target.classList.add('hover');
+  }
+}
+
+/* подсветка кнопок при наведении курсора */
+function flashKeysHover(event) {
+  const { target } = event;
+  if (target.classList.contains('keyboard__key')) {
+    target.classList.add('hover');
+  }
+}
+
+/* удаление подсветки кнопок при выводе курсора */
+function flashKeysOut(event) {
+  const { target } = event;
+  if (target.classList.contains('keyboard__key')) {
+    target.classList.remove('hover');
+  }
+}
+
 export {
-  makeKeyboard, makeKeysEn, makeKeysRu, pressKeys, changeLocalSorage,
+  makeKeyboard, makeKeysEn, makeKeysRu, pressKeys, changeLocalSorage, flashKeysR, flashKeysV,
+  flashKeysHover, flashKeysOut,
 };
